@@ -7,6 +7,15 @@ number 타입을 리턴해야 합니다.
  */
 
 function findMinLengthOfThreeWords(word1, word2, word3) {
-    // TODO: 여기에 코드를 작성합니다.
-  }
+    if(word1.length < word2.length && word1 .length < word3.length){
+        return word1.length;
+    } else if(word2.length < word1.length && word2.length < word3.length){
+        return word2.length;
+    } else if(word3.length < word1.length && word3.length < word2.length){
+        return word3.length;
+    } else if(word1.length=word2.length=word3.length){
+        return word1.length
+    }
+}
+  
   

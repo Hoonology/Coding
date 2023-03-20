@@ -8,6 +8,14 @@ string 타입을 리턴해야 합니다.
 
  */
 function makeLastSeenMsg(name, period) {
-    // TODO: 여기에 코드를 작성합니다.
+    if(period < 60){
+        return `${name}: ${period}분 전에 접속함`
+    } else if(period<1440){
+        return `${name}: ${Math.floor(period/60)}시간 전에 접속함`
+    } else{
+        return `${name}: ${Math.floor(period/1440)}일 전에 접속함`
+    }
   }
   
+output = makeLastSeenMsg('mike', 22);
+console.log(output); // --> 'mike: 2일 전에 접속함'

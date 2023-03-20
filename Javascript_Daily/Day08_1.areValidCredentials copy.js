@@ -6,6 +6,6 @@ boolean 타입을 리턴해야 합니다.
  */
 
 function areValidCredentials(name, password) {
-    // TODO: 여기에 코드를 작성합니다.
-  }
+    return name.length >= 3 && password.length >=8 ? true : false;
+}
   
