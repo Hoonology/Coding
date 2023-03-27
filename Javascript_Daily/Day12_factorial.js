@@ -18,6 +18,7 @@ factorial(3) = 1 * 2 * 3 = 6
 factorial(4) = 1 * 2 * 3 * 4 = 24
  */
 
+// for문
 function factorial(num) {
     if(num === 0 || num === 1){
         return 1;
@@ -27,3 +28,29 @@ function factorial(num) {
     }     
     return num;
 }
+
+// 재귀함수 
+function factorial(num) {
+    if (num < 0)
+      return -1;
+    else if (num == 0)
+      return 1;
+    else {
+      return (num * factorial(num - 1));
+    }
+  }
+
+// while문
+function factorial(num) {
+    let result = num;
+  
+    if (num === 0 || num === 1)
+      return 1;
+  
+    while (num > 1) {
+      num--;
+      result *= num;
+    }
+  
+    return result;
+  }
